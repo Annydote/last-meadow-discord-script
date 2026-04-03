@@ -48,7 +48,7 @@ let debugUI = document.getElementById('lmo-debug-ui');
 if (!debugUI) {
     debugUI = document.createElement('div');
     debugUI.id = 'lmo-debug-ui';
-    debugUI.style.cssText =[
+    debugUI.style.cssText = [
         'position:fixed', 'top:80px', 'left:10px',
         'background:rgba(0,0,0,0.88)', 'color:white',
         'padding:12px', 'font-family:monospace', 'font-size:13px',
@@ -177,7 +177,7 @@ function runPaladinEngine() {
         }
     });
 
-    const valid =[];
+    const valid = [];
     
     for (const [el, d] of pData) {
         const virtualTop = d.lastR.top - Y_OFFSET;

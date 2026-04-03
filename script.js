@@ -12,7 +12,7 @@ let debugUI = document.getElementById('lmo-debug-ui');
 if (!debugUI) {
     debugUI = document.createElement('div');
     debugUI.id = 'lmo-debug-ui';
-    debugUI.style.cssText =[
+    debugUI.style.cssText = [
         'position:fixed', 'top:80px', 'left:10px',
         'background:rgba(0,0,0,0.88)', 'color:white',
         'padding:12px', 'font-family:monospace', 'font-size:13px',
@@ -141,7 +141,7 @@ function runPaladinEngine() {
         }
     });
 
-    const valid =[];
+    const valid = [];
     
     for (const [el, d] of pData) {
         const virtualTop = d.lastR.top - Y_OFFSET;
@@ -327,9 +327,9 @@ const mainLoop = setInterval(() => {
         const btn = img.closest('[role="button"]');
         if (!btn) return;
         const src = img.src || '';
-        if (src.includes('0492e39') || src.includes('19393b5')) btnBattle    = btn;
-        if (src.includes('23aba2a') || src.includes('b7febb5')) btnCraft     = btn;
-        if (src.includes('282df26'))                             btnAdventure = btn;
+        if (src.includes('0492e39') || src.includes('19393b5') || src.includes('16fb255')) btnBattle    = btn;
+        if (src.includes('23aba2a') || src.includes('b7febb5') || src.includes('b603820')) btnCraft     = btn;
+        if (src.includes('282df26'))                                                       btnAdventure = btn;
     });
 
     if (tryClick(btnBattle,    "STARTING BATTLE"))     return;
