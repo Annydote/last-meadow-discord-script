@@ -241,7 +241,7 @@ const mainLoop = setInterval(() => {
         if (tryClick(btnContinue,  "CLICKING CONTINUE"))  return;
     }
 
-    const gb = document.querySelector('[class*="footer_"]');
+    const gb = document.querySelector('[class*="fullScreenOnMobile_"] [class*="footer_"]');
     if (gb) {
         btnGoBack = gb.querySelectorAll('[role="button"]');
         if (btnGoBack.length === 1 && tryClick(btnGoBack[0],  "CLICKING GO BACK")) return;

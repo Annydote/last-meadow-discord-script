@@ -277,7 +277,7 @@ const mainLoop = setInterval(() => {
         if (tryClick(btnContinue,  "CLICKING CONTINUE"))  return;
     }
 
-    const gb = document.querySelector('[class*="footer_"]');
+    const gb = document.querySelector('[class*="fullScreenOnMobile_"] [class*="footer_"]');
     if (gb) {
         btnGoBack = gb.querySelectorAll('[role="button"]');
         if (btnGoBack.length === 1 && tryClick(btnGoBack[0],  "CLICKING GO BACK")) return;
@@ -363,9 +363,9 @@ const mainLoop = setInterval(() => {
         const btn = img.closest('[role="button"]');
         if (!btn) return;
         const src = img.src || '';
-        if (src.includes('0492e39') || src.includes('19393b5')) btnBattle    = btn;
-        if (src.includes('23aba2a') || src.includes('b7febb5')) btnCraft     = btn;
-        if (src.includes('282df26'))                             btnAdventure = btn;
+        if (src.includes('0492e39') || src.includes('19393b5') || src.includes('16fb255')) btnBattle    = btn;
+        if (src.includes('23aba2a') || src.includes('b7febb5') || src.includes('b603820')) btnCraft     = btn;
+        if (src.includes('282df26'))                                                       btnAdventure = btn;
     });
 
     if (tryClick(btnBattle,    "STARTING BATTLE"))     return;
